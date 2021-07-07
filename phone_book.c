@@ -1,4 +1,5 @@
-#include<stdio.h>
+
+    #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 
@@ -178,7 +179,7 @@ entry *load_entries(FILE *fp)
     [^,\n] Square brackets are used to indicate a set of allowed
     characters [abc] means only a, b, or c. With the ^, it's
     used to specify a set of disallowed characters. So [^abc]
-    means any character except a, b, or c. [^,] means any
+    means any character *except* a, b, or c. [^,] means any
     character except a , [^,\n] means any character except a
     comma(,) or a newline(\n).
     %20[^,\n] will match a string of characters with a maximum length
@@ -240,7 +241,7 @@ int delete(FILE *db_file, char *name)
     entry *p = load_entries(db_file);
     entry *base = p;
     entry *prev = NULL;
-    entry del = NULL ; 
+    entry *del = NULL ; /* Node to be deleted */
     int deleted = 0;
     while(p!=NULL) 
     {
