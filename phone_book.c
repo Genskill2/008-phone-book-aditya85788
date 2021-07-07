@@ -240,7 +240,7 @@ int delete(FILE *db_file, char *name)
     entry *p = load_entries(db_file);
     entry *base = p;
     entry *prev = NULL;
-    entry del = NULL ; / Node to be deleted */
+    entry del = NULL ; 
     int deleted = 0;
     while(p!=NULL) 
     {
